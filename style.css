@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.background{
+    position:fixed;
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    width: 400px;
+    height: 100px;
+    background-color:#B5D5C5;
+    padding: 29px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: sans-serif;
+    transition: 0.7s ease-out;
+}
+
+.footer{
+    position: absolute;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: sans-serif;
+    color: #b5d5c5;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-area{
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-area input{
+    color: #354259;
+    background-color: #B5D5C5;
+    width: 75%;
+    font-size: 24px;
+    font-weight: 500;
+    padding-left: 50px;
+    
+}
+
+.search-area input::placeholder{
+    font-size: 22px;
+    font-weight: 500;
+    color:#354259;
+    text-transform: capitalize;
+}
+
+.search-area button{
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+    color: #EFEFEF;
+    background-color:#90A17D;
+    border-radius: 50%;
+    font-size: 19px;
+    transition: 0.6s ease;
+}
+
+.search-area button:hover{
+    color: #EFEFEF;
+    background-color: #90A17D;
+    font-size: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-area i{
+    color: #354259;
+    position: absolute;
+    font-size: 28px;
+}
+
+.weather-box{
+    text-align: center;
+}
+
+.weather-box img{
+    width: 60%;
+    margin-top: 30px;
+}
+
+.weather-box .temperature{
+    position: relative;
+    color: #354259;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;   
+}
+
+.weather-box .temperature span{
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+.weather-box .description{
+    color: #354259;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.weather-details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+.weather-details i{
+    color:#354259;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.weather-details span{
+    color: #354259;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.weather-details p{
+    color:#354259;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.text{
+    margin-left: 5px;
+}
+
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+.not-found img {
+    width: 70%;
+}
+
+.not-found p{
+    color:#354259;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+.weather-box .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+.fadeIn{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .background {
+            background-repeat: no-repeat;
+            background-size: auto;
+            height: 100%;
+            width: 200%;
+        }
+
+.container {
+        width: 350px;
+        height: 110px;
+    }
+
+.search-area button {
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 50%;
+    font-size: 20px;
+}
+
+.not-found{
+    margin-top: 80px;
+}
+
+.footer{
+    font-size: 15px;
+    height: 50px;
+}
+
+.search-area input::placeholder{
+    font-size: 17px;
+}
+.search-area button{
+    width: 40px;
+    height: 40px;
+    margin-right: 3px;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.search-area i{
+    font-size: 22px;
+}
+
+}
+
